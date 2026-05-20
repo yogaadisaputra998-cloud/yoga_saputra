@@ -66,7 +66,12 @@ col4.metric("Jenis Postingan", df['type'].nunique())
 # =========================
 st.subheader("Preview Dataset")
 
-st.dataframe(df.head())
+st.write(f"Jumlah data setelah filter: {len(df)}")
+
+st.dataframe(
+    df,
+    use_container_width=True
+)
 
 # =========================
 # STATISTIK DESKRIPTIF
